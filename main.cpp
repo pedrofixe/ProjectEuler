@@ -4596,8 +4596,28 @@ cout << min;*/
 
 	//-----------------------------------PROBLEM 233--------------------------------------
 
+	int N = 80000;
+	int sum = 0;
+	int xmax = floor((1 + sqrt(2))*N/(double)2);
+	double y;
 	
+		sum = 0;
+		for (double x = ceil((1-sqrt(2))*N/(double)2); x < (double)N/2; x++)
+		{
+			y = (N + sqrt(N*N + 4*x*N - 4*x*x))/(double)2;
+	
+			if (y == (int)y)
+				sum++;
+		}
+	
+		sum *= 4;
 
+		y = (N + sqrt(2*N*N))/(double)2;
+
+		if (y == (int)y)
+			sum += 2;
+
+		std::cout << "Soma = " << sum << '\n';
 
 
 	fim: t = clock() - t;
