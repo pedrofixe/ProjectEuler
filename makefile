@@ -1,8 +1,5 @@
 main: main.cpp
-	g++ main.cpp -o main -g -std=c++11
-
-file: test.cpp
-	g++ file.cpp -o file -g
-
+	g++ main.cpp -g -std=c++11 -o main
+	
 clean:
-	rm -f main
+	rm -f main main.exe
