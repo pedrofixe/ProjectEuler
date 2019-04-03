@@ -105,7 +105,7 @@ long long problem3()
 	return -1;
 }
 
-int problem4()
+long long problem4()
 {
 	int mult;
 	int max = 0;
@@ -124,8 +124,8 @@ int problem4()
 	return max;
 }
 
-
-int run(int (*probFunction)())
+template<class T>
+void run(T (*probFunction)())
 {
 	cout << "Problem: " << probFunction() << "\n";
 }
@@ -135,7 +135,7 @@ int run(int (*probFunction)())
 int main(int argc, char** argv)
 {
 
-	run(problem4);
+	run(problem3);
 
 	return 0;
 }
